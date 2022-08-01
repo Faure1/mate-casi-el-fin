@@ -18,6 +18,7 @@ const Layout = ({children}) => {
                     <Nav>
                         <Nav.Link href='#inicio' ><h5 className='text-white text-center'>inicio</h5></Nav.Link>
                         <Nav.Link href='#mas-info'><h5 className='text-white text-center'>Más informacion</h5></Nav.Link>
+                        <Nav.Link href='#Matematicos'><h5 className='text-white text-center'>Famosos Matematicos</h5></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
