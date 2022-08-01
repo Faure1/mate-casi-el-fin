@@ -6,15 +6,11 @@ export default function Home() {
     const [inputs, setInputs] = useState({
         A:"",
         B:"",
-        C:"",
-        Ecuacion1:[],
-        Ecuacion2:[]
+        C:""
     })
     const[stateA, setA] = useState('')
     const[stateB, setB] = useState('')
     const[stateC, setC] = useState('')
-    const[stateEcuacion1, setEcuacion1] = useState('')
-    const[stateEcuacion2, setEcuacion2] = useState('')
     const[resutaldo, setResultado] = useState(0)
     function calcularDelta(a,b,c){
         return b * b - 4 * a * c;
@@ -30,33 +26,11 @@ export default function Home() {
         if(e.target.name === 'C'){
             setC(e.target.value)
         }
-        if(e.target.name === 'Ecuacion1'){
-            setEcuacion1(e.target.value)
-      }
-      if(e.target.name === 'Ecuacion2'){
-        setEcuacion2(e.target.value)
-  }
         console.log(e.target.value , e.target.name)
     }
 
     const handleSubmit = () => {
-      if (stateEcuacion1 || stateEcuacion2){
-        let ecua1 = stateEcuacion1
-        let separado1 = ecua1.split("/")
-        let ecua2 = stateEcuacion2
-        let separado2 = ecua2.split("/")
-        console.log(separado1)
-        console.log(separado2)
-        // en vez de poner  [0] primero tendria que hacer el .find const found = separado1.find(element => element=="^");
-        //if found >2 entonces ahi acarle las x y las 2 ^ y por ultimo sumar los 2
-        //hacer esto del otro lado y ordenar para que queden en la posicion 0
-        //pasar los separado1 y separado2 a entero
-        let sumaelevados = separado1[0] + ((separado2[0])*-1)
-        // mandar el resultado al texto de abajo del input y que diga el valor de a es de....
-        //copiar y pegar esto pero  para sacar el valor de B y  C
-        console.log(sumaelevados)
-      }
-      else if (!stateA || !stateB || !stateC) {
+      if (!stateA || !stateB || !stateC) {
         Swal.fire({
           icon: "warning",
           title: "¡Cuidado!",
@@ -307,92 +281,7 @@ export default function Home() {
                   </div>
                 </div>
               </Row>
-              <Row></Row>
             </Container>
-          </section>
-          <section>
-          <div className='bg-secondary formulario sombra'>
-              <div className='d-flex justify-content-center mb-4'>
-                <h2 className='text-dark text-center'>Formula de Bhaskara</h2>
-              </div>
-              <Row>
-                <div className='col-lg-6 col-12'>
-                  <div className='d-flex justify-content-center text-center'>
-                    <p className='text-white text-center font-weight-bold'>
-                      Ecuacion 1
-                    </p>
-                  </div>
-                  <div className='text-center'>
-                    <input
-                      placeholder='Ecuacion 1'
-                      name='Ecuacion1'
-                      className='text'
-                      id='Ecuacion1'
-                      value={inputs.Ecuacion1}
-                      onChange={(e) => {
-                        handleOnChage(e);
-                      }}
-                    />
-                  </div>
-                </div>
-                <div className='col-lg-6 col-12'>
-                  <div className='d-flex justify-content-center text-center'>
-                    <p className='text-white text-center font-weight-bold'>
-                      Valor de B
-                    </p>
-                  </div>
-                  <div className='text-center'>
-                    <input
-                      placeholder='Ecuacion 2'
-                      name='Ecuacion2'
-                      className='text'
-                      id='Ecuacion2'
-                      value={inputs.Ecuacion2}
-                      onChange={(e) => {
-                        handleOnChage(e);
-                      }}
-                    />
-                  </div>
-                </div>
-              </Row>
-              <Row className='mt-4 d-flex justify-content-center'>
-                <div className='col-lg-4 col-6 text-center'>
-                  <button
-                    className='btn btn-dark'
-                    type='button'
-                    onClick={() => handleSubmit()}
-                  >
-                    Mandar
-                  </button>
-                </div>
-                <div className='col-lg-4 col-6 text-center'>
-                  <button
-                    className='btn btn-dark'
-                    type='button'
-                    onClick={() => limpiar()}
-                  >
-                    Limpiar
-                  </button>
-                </div>
-              </Row>
-              <Row className='mt-4 d-flex justify-content-center'>
-                <div className='col-lg-4 col-12 text-center'>
-                  <h5 className='de-flex'>
-                    El valor de A es: {resutaldo.Ecuaciones1}
-                  </h5>
-                </div>
-                <div className='col-lg-4 col-12 text-center'>
-                  <h5>
-                    El valor de B es: {resutaldo.Ecuaciones2}
-                  </h5>
-                </div>
-                <div className='col-lg-4 col-12 text-center'>
-                  <h5 className='de-flex'>
-                    El valor de C es: {resutaldo.Ecuaciones1}
-                  </h5>
-                </div>
-              </Row>
-            </div>
           </section>
         </Layout>
       </>
