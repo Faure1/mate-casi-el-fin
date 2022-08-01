@@ -2,7 +2,10 @@ import React, {useState} from 'react';
 import Layout from '../components/Layout.js';
 import {Button, Container, Row,Image} from 'react-bootstrap';
 import Swal from "sweetalert2";
+import Brands from '../portafolio.js';
+import Head from 'next/head'
 export default function Home() {
+  <link async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4897751825620818" crossOrigin="anonymous"></link>
     const [inputs, setInputs] = useState({
         A:"",
         B:"",
@@ -76,6 +79,12 @@ export default function Home() {
     return (
       <>
         <Layout>
+          <Head>
+            <title>
+              Calculadora de Bhaskara
+            </title>
+            <meta name='description' content='esta pagina sirve para calcular Bhaskara de forma facil'></meta>
+          </Head>
           <section id='inicio' className=' mb-5 hero d-flex align-items-center'>
             <div className='bg-secondary formulario sombra'>
               <div className='d-flex justify-content-center mb-4'>
@@ -225,13 +234,22 @@ export default function Home() {
                 </div>
               </Row>
               <Row>
-                <div className='d-flex col-12 justify-content-center'>
+                <div className='d-flex col-12 col-lg-6 justify-content-center mb-5'>
                   <Image
                     alt='abc'
-                    src='/assets/abc.png'
+                    src='/assets/abc1.png'
+                    width={375}
+                    height={150}
+                    layout='responsive'
+                  ></Image>
+                </div>
+                <div className='d-flex col-12 col-lg-6 justify-content-center'>
+                  <Image
+                    alt='abc'
+                    src='/assets/abc2.png'
                     width={375}
                     height={200}
-                    layout='intrinsic'
+                    layout='responsive'
                   ></Image>
                 </div>
               </Row>
@@ -283,8 +301,97 @@ export default function Home() {
               </Row>
             </Container>
           </section>
+          <section className='mt-5 mb-5'>
+            <Brands></Brands>
+          </section>
+          <section>
+            <Container>
+              <Row className='mb-5 mt-5' id='Adrián'>
+                <div id='Matematicos' className='col-12 mb-5 mt-5 d-flex justify-content-center'><h1>Famosos Matematicos </h1></div>
+                <div className='col-12 col-lg-6 mb-5'>
+                  <div>
+                    <Image
+                        alt='Adrián Paenza'
+                        className='igual'
+                        src='./assets/Adrian-Paenza.png'
+                        width={375}
+                        height={200}
+                        layout='responsive'
+                      ></Image>
+                    </div>
+                </div>
+                <div className='col-12 col-lg-6 d-flex justify-content-center align-items-center'>
+                  <div>
+                    <h1 className='text-center'>Adrián Paenza</h1>
+                    <p className='text-center'>Nacio en argentina Buenos Aires, fue la primer persona en el país en escribir una nota de opinión sobre lo lindo de hacer matemática en la vida cotidiana, tambien es periodista, desde entonces trabajó en diversos diarios  y tuvo todas las series educativas de matemáticas del canal Encuentro. Hoy lleva adelante alterados por pi.</p>
+                  </div>
+                </div>
+              </Row>
+              <Row className='mb-5 mt-5' id='Cabezón'>
+                <div className='col-12 col-lg-6 d-flex justify-content-center align-items-center'>
+                  <div>
+                    <h1 className='text-center'>Eduardo Sáenz de Cabezón</h1>
+                    <p className='text-center'>Eduardo Sáenz de Cabezón es un matemático, profesor de Lenguajes y Sistemas Informáticos y también teólogo, aunque en la actualidad no ejerza como tal y reconocido especialista en monólogos científicos. Desarrolla su investigación en el área del álgebra computacional, a la que ha contribuido con 25 publicaciones de investigación y colaboraciones con matemáticos españoles y europeos como Henry P. Wynn. Tambien realiza una intensa labor de divulgación de las matemáticas mediante conferencias, espectáculos, charlas y talleres para personas de todas las edades y por todo el mundo España, México, Panamá, Argentina, Costa Rica, Uruguay, etc. Fue ganador de concursos de monólogos científicos: Famelab España 2013 y en la Fundación Aquae 2014, llegando a ser finalista en el Cheltenham Science Festival Reino Unido.</p>
+                  </div>
+                </div>
+                <div className='col-12 col-lg-6 mb-5'>
+                  <div>
+                    <Image
+                        alt='Adrián Paenza'
+                        className='igual'
+                        src='./assets/Cabezón.png'
+                        width={375}
+                        height={200}
+                        layout='responsive'
+                      ></Image>
+                    </div>
+              </div>
+              </Row>
+              <Row className='mb-5 mt-5' id='Isaac'>
+              <div className='col-12 col-lg-6 mb-5'>
+                  <div>
+                    <Image
+                        alt='Adrián Paenza'
+                        className='igual'
+                        src='./assets/isaac.png'
+                        width={375}
+                        height={200}
+                        layout='responsive'
+                      ></Image>
+                    </div>
+              </div>
+                <div className='col-12 col-lg-6 d-flex justify-content-center align-items-center'>
+                  <div>
+                    <h1 className='text-center'>Isaac Newton</h1>
+                    <p className='text-center'>Isaac Newton fue un físico, teólogo, inventor, alquimista y matemático inglés. Desde finales de 1664 trabajó intensamente en diferentes problemas matemáticos. Abordó entonces el teorema del binomio, a partir de los trabajos de John Wallis, y desarrolló un método propio denominado cálculo de fluxiones. Poco después regresó a la granja familiar a causa de una epidemia de peste bubónica.</p>
+                  </div>
+                </div>
+              </Row>
+              <Row className='mb-5 mt-5' id='Rene'>
+                <div className='col-12 col-lg-6 d-flex justify-content-center align-items-center'>
+                  <div>
+                    <h1 className='text-center'>René Descartes</h1>
+                    <p className='text-center'>René Descartes, fue un filósofo, matemático y físico francés considerado el padre de la geometría analítica y la filosofía moderna. Uno de los legados más perdurables de Descartes fue su desarrollo de la geometría cartesiana o analítica, que utiliza el álgebra para describir la geometría. Descartes inventó la convención de representar incógnitas en las ecuaciones con  x , y , z  y datos conocidos por  a , b , c . También fue pionero en la notación estándar que usa superíndices para indicar los exponentes; por ejemplo, el 2 utilizado en x 2 para indicar x al cuadrado.Son conocidos los teoremas de Descartes acerca de los defectos angulares, en el que la suma de los defectos angulares de todos los vértices de un poliedro convexo sin huecos como un cubo es siempre igual a 4π o 720º,teniendo similitudes con la teorema de Euler para poliedros y el teorema de los círculos de las cuatro tangentes, en donde los inversos k de los radios de cuatro circunferencias mutuamente tangentes satisfacen</p>
+                  </div>
+                </div>
+                <div className='col-12 col-lg-6 mb-5'>
+                  <div>
+                    <Image
+                        alt='Adrián Paenza'
+                        className='igual'
+                        src='./assets/Rene.png'
+                        width={375}
+                        height={200}
+                        layout='responsive'
+                      ></Image>
+                    </div>
+              </div>
+              </Row>
+            </Container>
+          </section>
         </Layout>
       </>
     );
 }
+
 
