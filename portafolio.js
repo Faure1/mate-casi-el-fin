@@ -21,11 +21,10 @@ export const Brands = () => {
           modules={[Autoplay, Pagination, Navigation, ]}
           className="mySwiper"
         >
-          <SwiperSlide className="d-flex justify-content-center"><img src="/assets/mayer.png" /></SwiperSlide>
-          <SwiperSlide><a target="_blank" href="https://react-bootstrap.github.io/components/alerts"><img src="/bootstrapreact.png" /></a></SwiperSlide>
-          <SwiperSlide><a target="_blank" href="https://sass-lang.com/guide"><img src="/sass.png" /></a></SwiperSlide>
-          <SwiperSlide><a target="_blank" href="https://www.w3schools.com"><img src="/w3schools.png" /></a></SwiperSlide>
-          <SwiperSlide><a target="_blank" href="https://swiperjs.com/swiper-api"><img src="/swiper.png" /></a></SwiperSlide>
+          <SwiperSlide className="d-flex justify-content-center"><div className="col-12"><a  href="#Adrián"><img alt="Adrian" src="./assets/Adrian-Paenza.png"></img></a></div></SwiperSlide>
+          <SwiperSlide className="d-flex justify-content-center align-items-center"><a  href="#Cabezón"><img alt="Cabezon" className="Cabezon" src="./assets/Cabezón.png" /></a></SwiperSlide>
+          <SwiperSlide className="d-flex justify-content-center"><a href="#Isaac"><img alt="Isaac" className="Cabezon" src="./assets/isaac.png" /></a></SwiperSlide>
+          <SwiperSlide className="d-flex justify-content-center"><a  href="#Rene"><img alt="Rene" className="Cabezon" src="./assets/Rene.png" /></a></SwiperSlide>
         </Swiper>
       </>
     )
